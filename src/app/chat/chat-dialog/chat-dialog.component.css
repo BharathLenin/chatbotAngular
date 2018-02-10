@@ -4,6 +4,12 @@
     padding: 15px 20px;
     position: relative;
     font-weight: bold;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.containerclass {
+    margin-top: 76px;
+    height: 100%;
 }
 .message.to {
     background-color: #2095FE;
@@ -21,7 +27,44 @@
 margin-top: -10px;
 }
 
+.mat-fab {
+    height: 42px;
+    width: 42px;
+}
 
+.material-icons {
+    line-height: 0.5;
+}
+
+.example-form {
+    min-width: 150px;
+    width: 100%;
+    display: flex;
+  }
+  
+
+  .example-full-width {
+    width: 100%;
+  }
+  .footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    padding: 1em;
+    width: 92%;
+    background-color: white;
+ }
+
+ .header {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    z-index: 1;
+ }
+ 
+  
 
 .matCardTitle {
     color: white;
@@ -30,6 +73,10 @@ margin-top: -10px;
     font-size: 1.4em;
     
 }
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
 
 .buttonLast {
     display: inline-block;
@@ -74,6 +121,8 @@ h1 {
     font-size: 1.5em !important;
 }
 
-body {
-    padding: 0.5em !important;
+.mat-form-field {
+    padding-left: 1em;
+    padding-right: 1em;
 }
+

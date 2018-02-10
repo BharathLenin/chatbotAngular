@@ -1,33 +1,68 @@
-<h1>Homedepot Bot</h1>
-<button class="mainbutton1" type="button"  (click)="startVoice()"><img src="https://www.materialui.co/materialIcons/hardware/keyboard_voice_black_144x144.png" alt=""></button>
-<ng-container *ngFor="let message of messages | async">
-  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-    {{ message.content }}
-    
-  
-  </div>
-  <br>
+  <mat-toolbar color="primary" class="header">
+    <mat-toolbar-row>
+      <span>Haisy</span>
+      <span class="example-spacer"></span>
+      
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<div *ngIf="message.title != ''"  [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-                                    <mat-card class="matCard">
-  <mat-card-header class="matCardHeader">
-    <mat-card-title class="matCardTitle">{{ message.title }}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="{{ message.image }}" >
-  <mat-card-content class="matCardText">
-    <p>
-      {{ message.text }}
-    </p>
-  </mat-card-content>
-  <mat-card-actions class="matcard">
-    <button mat-button>{{ message.button }}</button>
-  </mat-card-actions>
-  </mat-card>
-  <br>
+<div class="containerclass">
+  <ng-container *ngFor="let message of messages | async">
+    <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }" >
+      {{ message.content }}
+      
+    
+    </div>
+    <br>
+  
+  <div *ngIf="message.title != ''"  [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+                                      <mat-card class="matCard">
+    <mat-card-header class="matCardHeader">
+      <mat-card-title class="matCardTitle">{{ message.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ message.image }}" >
+    <mat-card-content class="matCardText">
+      <p>
+        {{ message.text }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="matcard">
+      <button mat-button>{{ message.button }}</button>
+    </mat-card-actions>
+    </mat-card>
+  </div>
+  </ng-container>
+
+
+
 </div>
-</ng-container>
-<label for="nameField">Your Message</label>
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-  <button class="mainbutton" (click)="sendMessage()">Send</button>
+  
+<!-- <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+  <button class="mainbutton" (click)="sendMessage()">Send</button> -->
+
+
+
+  <!-- <div class="footer">
+  
+  </div> -->
+  
+<div class="footer">
+      <div class="example-form" >
+          <div class="microphoneButton">
+              <button mat-fab (click)="startVoice()">
+                <mat-icon aria-label="Example icon-button with a heart icon">settings_voice</mat-icon>
+              </button>
+            </div>  
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="formValue" name="myForm" (keyup.enter)="sendMessage()" type="text" matInput placeholder="Your Message" value="">
+          
+        </mat-form-field>
+        <button mat-fab>
+          <mat-icon aria-label="Example icon-button with a heart icon">send</mat-icon>
+        </button>
+        
+      </div>
+</div>

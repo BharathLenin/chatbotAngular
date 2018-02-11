@@ -17,7 +17,7 @@
     </div>
     <br>
   
-  <div *ngIf="message.title != ''"  [ngClass]="{ 'from': message.sentBy === 'bot',
+  <div class="message" *ngIf="message.title != ''"  [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to':   message.sentBy === 'user' }">
                                       <mat-card class="matCard">
     <mat-card-header class="matCardHeader">
@@ -60,7 +60,7 @@
           <input [(ngModel)]="formValue" name="myForm" (keyup.enter)="sendMessage()" type="text" matInput placeholder="Your Message" value="">
           
         </mat-form-field>
-        <button mat-fab>
+        <button mat-fab (click)="sendMessage()">
           <mat-icon aria-label="Example icon-button with a heart icon">send</mat-icon>
         </button>
         

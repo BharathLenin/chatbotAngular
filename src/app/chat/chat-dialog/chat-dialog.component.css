@@ -9,6 +9,8 @@
 }
 
 
+
+
 .containerclass {
     margin-top: 150px;
     height: 100%;
@@ -109,7 +111,6 @@ background-color: orangered;
     padding: 0;
 }
 .mat-card-image {
-    margin-left: 0em;
 }
 
 .matcard {

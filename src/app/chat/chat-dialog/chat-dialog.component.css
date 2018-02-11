@@ -5,11 +5,15 @@
     position: relative;
     font-weight: bold;
     font-family: Roboto,"Helvetica Neue",sans-serif;
+    bottom: 5em;
 }
 
+
 .containerclass {
-    margin-top: 76px;
+    margin-top: 150px;
     height: 100%;
+    /* bottom: 5em;
+    position: relative; */
 }
 .message.to {
     background-color: #2095FE;
